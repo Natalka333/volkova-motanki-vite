@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.photo {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.text {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.text h2 {
+    margin-bottom: 1rem;
+    color: #8b0000;
+}
+
+.text p {
+    margin-bottom: 1rem;
+}
