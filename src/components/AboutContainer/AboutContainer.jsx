@@ -10,9 +10,9 @@ const AboutContainer = () => {
 
     return (
         <div className={css.container}>
-            <img src='/public/photo.natWork.jpg' alt="Майстриня за роботою" className={css.photo} />
+            <img src='/photo.natWork.jpg' alt="Майстриня за роботою" className={css.photo} />
             <div className={css.text}>
-                <h2>Про мотанки</h2>
+                {/* <h2>Про мотанки</h2> */}
                 <p>
                     <strong>Мотанка</strong> — це традиційна українська лялька-оберіг, яка має багатовікову історію. Її створювали з натуральних
                     матеріалів: тканини, соломи, ниток. Назва «мотанка» походить від слова «мотати», адже в процесі виготовлення ляльки тканину не шили, а
