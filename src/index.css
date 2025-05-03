@@ -42,6 +42,13 @@ html, body {
   background-attachment: fixed;
 }
 
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 
 body {
   font-family: 'Caveat', cursive;
