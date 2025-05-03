@@ -3,12 +3,13 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 60px 40px;
+    padding: 40px 20px;
     background-image: url('/wood-bg.jpg');
-    /* если фон не задан через body */
     background-size: cover;
     background-position: center;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .gallery {
@@ -43,6 +44,7 @@
 .home_content {
     flex-grow: 1;
     text-align: center;
+    margin-top: 20px;
 }
 
 .home_name {
@@ -59,34 +61,20 @@
 }
 
 .home_photo {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border: 8px solid #fff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     object-fit: cover;
-    margin-left: auto;
+    margin: 20px auto 0 auto;
+    display: block;
 }
-
-/* .btn_home {
-    position: absolute;
-    bottom: 10px;
-    right: 30px;
-    padding: 12px 28px;
-    font-size: 16px;
-    background-color: #3c2f2f;
-    color: white;
-    border: none;
-    border-radius: 24px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: background-color 0.3s;
-} */
 
 .btn_home {
     position: absolute;
     bottom: 10px;
     right: 30px;
-    margin-top: 2rem;
-    align-self: flex-end;
     width: 100px;
     height: 40px;
     border-radius: 20px;
@@ -98,7 +86,41 @@
     transition: background-color 0.3s ease;
 }
 
-
 .btn_home:hover {
     background-color: gray;
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .gallery img {
+        width: 100px;
+    }
+
+    .home_name {
+        font-size: 36px;
+    }
+
+    .home_tagline {
+        font-size: 18px;
+    }
+
+    .btn_home {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        bottom: 20px;
+    }
 }

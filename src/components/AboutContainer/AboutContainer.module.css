@@ -6,6 +6,7 @@
     padding: 3rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .left {
@@ -32,6 +33,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .text {
@@ -62,44 +64,142 @@
     border: 3px solid white;
 }
 
-.btn_home {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
     margin-top: 2rem;
     align-self: flex-end;
-    width: 100px;
+    flex-wrap: wrap;
+}
+
+.btn_home,
+.btn_back {
+    width: 120px;
     height: 40px;
     border-radius: 20px;
     border: none;
-    background-color: #3c2f2f;
-    color: white;
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.btn_home {
+    background-color: #3c2f2f;
+    color: white;
 }
 
 .btn_home:hover {
     background-color: gray;
 }
 
-
 .btn_back {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    margin-right: 120px;
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
     background-color: white;
     color: black;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .btn_back:hover {
     background-color: gray;
+}
+
+/* Адаптив для планшета и мобильного */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .left,
+    .right {
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .gallery img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .buttons {
+        justify-content: center;
+        align-self: center;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}
+
+
+/* Адаптив для планшета */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .left,
+    .right {
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .photo {
+        width: 80%; /* уменьшаем размер фото на планшете */
+        max-width: 350px; /* устанавливаем максимальную ширину */
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .gallery img {
+        width: 110px; /* уменьшение размера изображений в галерее */
+        height: 110px;
+    }
+
+    .buttons {
+        justify-content: center;
+        align-self: center;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .left,
+    .right {
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .gallery img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .buttons {
+        justify-content: center;
+        align-self: center;
+    }
+
+    .text {
+        font-size: 18px;
+    }
 }
