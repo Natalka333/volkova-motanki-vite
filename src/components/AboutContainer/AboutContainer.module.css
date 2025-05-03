@@ -1,34 +1,70 @@
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    max-width: 800px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.left {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .photo {
     width: 100%;
-    max-width: 400px;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 5px solid white;
+}
+
+.right {
+    flex: 2;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .text {
-    text-align: left;
-    line-height: 1.6;
-}
-
-.text h2 {
-    margin-bottom: 1rem;
-    color: #8b0000;
+    line-height: 1.8;
+    color: #2c3e50;
+    font-size: 20px;
+    font-family: 'Caveat', cursive;
+    margin-bottom: 2rem;
 }
 
 .text p {
     margin-bottom: 1rem;
 }
 
+.gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.gallery img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 3px solid white;
+}
+
 .btn_home {
+    margin-top: 2rem;
+    align-self: flex-end;
     width: 100px;
     height: 40px;
     border-radius: 20px;
