@@ -1,12 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import css from './AboutContainer.module.css';
 
-
 const AboutContainer = () => {
     const navigate = useNavigate();
-    const handleNavigate = () => {
+
+    const handleNext = () => {
         navigate('/gallery');
-    }
+    };
+
+    const handleBack = () => {
+        navigate(-1); // ← Возвращает на предыдущую страницу
+    };
 
     return (
         <div className={css.container}>
@@ -20,15 +24,9 @@ const AboutContainer = () => {
 
             <div className={css.right}>
                 <div className={css.text}>
-                    <p>
-                        <strong>Мотанка</strong> — це традиційна українська лялька-оберіг, яка має багатовікову історію...
-                    </p>
-                    <p>
-                        Ці ляльки не мали обличчя — замість нього робили хрест як символ захисту...
-                    </p>
-                    <p>
-                    Сьогодні мотанка — це водночас і елемент культурної спадщини, і форма творчого самовираження. 
-                    </p>
+                    <p><strong>Мотанка</strong> — це традиційна українська лялька-оберіг...</p>
+                    <p>Ці ляльки не мали обличчя — замість нього робили хрест...</p>
+                    <p>Сьогодні мотанка — це і культурна спадщина, і творчість.</p>
                 </div>
 
                 <div className={css.gallery}>
@@ -37,10 +35,12 @@ const AboutContainer = () => {
                     <img src="/doll_3.jpg" alt="Работа 3" />
                 </div>
 
-                <button onClick={handleNavigate} className={css.btn_home}>Next</button>
+                <div className={css.buttons}>
+                    <button onClick={handleBack} className={css.btn_back}>Back</button>
+                    <button onClick={handleNext} className={css.btn_home}>Next</button>
+                </div>
             </div>
         </div>
-
     );
 };
 
